@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<head>
+	<link rel="stylesheet" href="../styles/home.css" type="text/css" />
+	<script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+	<script type="text/javascript" src="../scripts/home.js"></script>
+</head>
+<body>
+	<div class="calculator">
+		<div class="heading">
+			Simple Calculator
+		</div>
+		<div class="input-container">
+			<input type="text" value="Enter Operand" id="input-box" onfocus="calculator.resetInputBox();"/>
+		</div>
+		<div class="number-container">
+			<div class="row">
+				<div class="op-container" onclick="calculator.populateOperand(this)">7
+				</div>
+				<div class="op-container" onclick="calculator.populateOperand(this)">8
+				</div>
+				<div class="op-container" onclick="calculator.populateOperand(this)">9
+				</div>
+				<div class="op-container" onclick="calculator.populateOperator(this)">/
+				</div>
+			</div>
+			<div class="row">
+				<div class="op-container" onclick="calculator.populateOperand(this)">4
+				</div>
+				<div class="op-container" onclick="calculator.populateOperand(this)">5
+				</div>
+				<div class="op-container" onclick="calculator.populateOperand(this)">6
+				</div>
+				<div class="op-container" onclick="calculator.populateOperator(this)">*
+				</div>
+			</div>
+			<div class="row">
+				<div class="op-container" onclick="calculator.populateOperand(this)">1
+				</div>
+				<div class="op-container" onclick="calculator.populateOperand(this)">2
+				</div>
+				<div class="op-container" onclick="calculator.populateOperand(this)">3
+				</div>
+				<div class="op-container" onclick="calculator.populateOperator(this)">-
+				</div>
+			</div>
+			<div class="row">
+				<div class="op-container" onclick="calculator.populateOperand(this)">0
+				</div>
+				<div class="op-container" onclick="calculator.clearInputBox(this)">AC
+				</div>
+				<div class="op-container" id="cal-sum" onclick="calculator.calculateAns();">=
+				</div>
+				<div class="op-container" onclick="calculator.populateOperator(this)">+
+				</div>
+			</div>
+		</div>
+		<div class="error-container">
+		</div>
+	</div>
+</body>
+</html>
